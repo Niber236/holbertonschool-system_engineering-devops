@@ -1,0 +1,15 @@
+https://imgur.com/remplace_par_ton_lien_d_image.png
+
+### Infrastructure Specifics
+* What is a server: A server is a physical or virtual machine connected to a network that hosts applications, databases, and files, continuously running to respond to client requests.
+* What is the role of the domain name: A domain name provides a human-readable and memorable alias (like foobar.com) for a numeric IP address, making websites easily accessible without remembering numbers.
+* What type of DNS record www is in www.foobar.com: It is an A record (Address record) because it maps the domain directly to the server's IPv4 address (8.8.8.8).
+* What is the role of the web server: The web server (Nginx) acts as the entry point. It handles incoming HTTP requests, serves static content (HTML, CSS, JS), and proxies dynamic requests to the application server.
+* What is the role of the application server: The application server executes the backend codebase and business logic, processes dynamic data, and handles communication with the database.
+* What is the role of the database: The database (MySQL) is a structured storage system that securely retains persistent data (user accounts, logs, application data) required by the application.
+* What the server is using to communicate with the computer of the user: It uses the HTTP/HTTPS protocols over network connections managed by the TCP/IP protocol suite.
+
+### Infrastructure Issues
+* SPOF (Single Point of Failure): If this single server fails or loses connectivity, the entire infrastructure and website go completely offline.
+* Downtime during maintenance: Operations like software updates, configuration changes, or deploying new code require restarting services, causing temporary downtime for users.
+* Scalability limits: A single server cannot scale horizontally to support high incoming traffic; it will quickly crash if it runs out of CPU, RAM, or network capacity.
